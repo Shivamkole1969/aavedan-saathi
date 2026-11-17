@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>कृतिदेव से यूनिकोड कन्वर्टर (Krutidev to Unicode) और यूनिकोड से कृतिदेव | Aavedan Saathi</title>
+<meta name="description" content="Kruti Dev 010 का टेक्स्ट (जैसे Hkkjr ljdkj) पेस्ट करें और यूनिकोड हिंदी (भारत सरकार) पाएँ, या उल्टा। मुफ़्त, बिना लॉगिन, बिना विज्ञापन। टेक्स्ट आपके ब्राउज़र में ही बदलता है।">
+<link rel="canonical" href="https://shivamkole1969.github.io/aavedan-saathi/krutidev-unicode-converter/">
+<meta name="theme-color" content="#0f766e">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">आवेदन साथी<small>Aavedan Saathi</small></a>
+  <button class="langbtn" id="langbtn" type="button">English</button>
+</div></header>
+<main class="wrap">
+  <h1><span class="hi">कृतिदेव ↔ यूनिकोड कन्वर्टर</span><span class="en">Krutidev ↔ Unicode converter</span></h1>
+  <p class="lead"><span class="hi">Kruti Dev 010 में टाइप किया टेक्स्ट (जैसे <code>Hkkjr ljdkj</code>) यूनिकोड हिंदी (भारत सरकार) में बदलें, या उल्टा। टेक्स्ट आपके ब्राउज़र में ही बदलता है, कहीं भेजा नहीं जाता।</span><span class="en">Turn text typed in Kruti Dev 010 (such as <code>Hkkjr ljdkj</code>) into Unicode Hindi (भारत सरकार), or the other way round. The text is converted in your browser and is never sent anywhere.</span></p>
+
+  <div class="card">
+    <label for="dir"><span class="hi">दिशा</span><span class="en">Direction</span></label>
+    <select id="dir">
+      <option value="k2u" data-hi="कृतिदेव → यूनिकोड" data-en="Krutidev → Unicode">कृतिदेव → यूनिकोड</option>
+      <option value="u2k" data-hi="यूनिकोड → कृतिदेव" data-en="Unicode → Krutidev">यूनिकोड → कृतिदेव</option>
+    </select>
+    <label for="src" id="srcLabel"></label>
+    <textarea id="src" class="convbox" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+    <p id="hint" class="small muted"></p>
+    <div class="btns">
+      <button class="btn secondary" id="swap" type="button"><span class="hi">⇅ उल्टा करें</span><span class="en">⇅ Swap</span></button>
+      <button class="btn secondary" id="clear" type="button"><span class="hi">मिटाएँ</span><span class="en">Clear</span></button>
+    </div>
+    <label for="out" id="outLabel"></label>
+    <textarea id="out" class="convbox" readonly spellcheck="false"></textarea>
+    <p id="count" class="small muted"></p>
+    <div class="btns">
+      <button class="btn" id="copy" type="button" data-hi="कॉपी करें" data-en="Copy">कॉपी करें</button>
+      <a class="btn secondary" id="practise" href="../typing-test/?custom=1"><span class="hi">इस पाठ पर टाइपिंग अभ्यास करें</span><span class="en">Practise typing this text</span></a>
+    </div>
+    <p id="kdNote" class="note small hidden"><span class="hi">कृतिदेव का टेक्स्ट यहाँ अंग्रेज़ी अक्षरों जैसा दिखता है, यह सही है। इसे MS Word या किसी दूसरी फ़ाइल में पेस्ट करें और फ़ॉन्ट <b>Kruti Dev 010</b> चुनें, तब यह हिंदी में दिखेगा। यह फ़ॉन्ट आपके कंप्यूटर में होना चाहिए; हम इसे नहीं देते।</span><span class="en">Krutidev text looks like English letters here; that is expected. Paste it into MS Word or another file and choose the <b>Kruti Dev 010</b> font, and it shows as Hindi. The font must already be on your computer; we do not supply it.</span></p>
+    <p id="latinNote" class="note small hidden"><span class="hi">आपके पाठ में अंग्रेज़ी अक्षर हैं। कृतिदेव फ़ॉन्ट में वे हिंदी जैसे दिखेंगे, इसलिए अंग्रेज़ी शब्दों को किसी अंग्रेज़ी फ़ॉन्ट में रखें।</span><span class="en">Your text has English letters. In the Kruti Dev font they will look like Hindi, so keep English words in an English font.</span></p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi">कैसे इस्तेमाल करें</span><span class="en">How to use it</span></h2>
+    <ol class="steps">
+      <li><span class="hi">Word फ़ाइल में कृतिदेव वाला टेक्स्ट चुनें और कॉपी करें (Ctrl+C)।</span><span class="en">Select the Krutidev text in your Word file and copy it (Ctrl+C).</span></li>
+      <li><span class="hi">ऊपर वाले डिब्बे में पेस्ट करें। हम खुद पहचान लेते हैं कि टेक्स्ट कृतिदेव में है या यूनिकोड में।</span><span class="en">Paste it into the top box. We detect on our own whether it is Krutidev or Unicode.</span></li>
+      <li><span class="hi">"कॉपी करें" दबाएँ और यूनिकोड टेक्स्ट को Google Docs, WhatsApp, ईमेल या ऑनलाइन फॉर्म में पेस्ट करें।</span><span class="en">Press "Copy" and paste the Unicode text into Google Docs, WhatsApp, email or an online form.</span></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi">आम सवाल</span><span class="en">Common questions</span></h2>
+    <p><b><span class="hi">कृतिदेव और यूनिकोड में क्या फ़र्क़ है?</span><span class="en">What is the difference between Krutidev and Unicode?</span></b><br>
+    <span class="hi">कृतिदेव एक पुराना फ़ॉन्ट है: अंदर से टेक्स्ट अंग्रेज़ी अक्षर ही होते हैं, फ़ॉन्ट उन्हें हिंदी जैसा दिखाता है। इसलिए फ़ॉन्ट बदलते ही "भारत" "Hkkjr" बन जाता है। यूनिकोड (जैसे Mangal फ़ॉन्ट) में हर अक्षर सचमुच हिंदी अक्षर है, इसलिए वह हर फ़ोन, वेबसाइट और फॉर्म में सही दिखता है।</span>
+    <span class="en">Kruti Dev is an old font: underneath, the text is English letters that the font draws as Hindi. Change the font and "भारत" turns into "Hkkjr". In Unicode (for example the Mangal font) every letter really is a Hindi letter, so it shows correctly on every phone, website and form.</span></p>
+    <p><b><span class="hi">ऑनलाइन फॉर्म में कौन-सा टेक्स्ट डालें?</span><span class="en">Which text goes into an online form?</span></b><br>
+    <span class="hi">यूनिकोड। कृतिदेव का टेक्स्ट फॉर्म में "Hkkjr" जैसा ही पहुँचेगा।</span><span class="en">Unicode. Krutidev text arrives in a form looking like "Hkkjr".</span></p>
+    <p><b><span class="hi">क्या SSC टाइपिंग टेस्ट में कृतिदेव कीबोर्ड मिलता है?</span><span class="en">Does the SSC typing test offer a Krutidev keyboard?</span></b><br>
+    <span class="hi">SSC CHSL 2023 टियर-II टाइपिंग टेस्ट के निर्देशों (बिंदु 6) में हिंदी के चार कीबोर्ड लेआउट दिए हैं: इनस्क्रिप्ट, कृतिदेव, रेमिंगटन गेल और रेमिंगटन CBI। बिंदु 8 के अनुसार टेस्ट के दौरान भी लेआउट बदला जा सकता है। अपनी परीक्षा का नोटिस ज़रूर देखें।</span>
+    <span class="en">The SSC CHSL 2023 Tier-II typing test instructions (point 6) list four Hindi keyboard layouts: Inscript, Krutidev, Remington GAIL and Remington CBI. Point 8 says the layout can also be changed during the test. Always check your own exam notice.</span></p>
+    <p class="src"><span class="hi">स्रोत:</span><span class="en">Source:</span> SSC (Karnataka Kerala Region), "CHSLE-2023 Tier-II Typing Test: Other Important Instructions": <a href="https://www.ssckkr.kar.nic.in/CHSLE-23(T-2)_TT%20Instructions.pdf" target="_blank" rel="noopener">ssckkr.kar.nic.in</a></p>
+    <p><b><span class="hi">कुछ शब्द अलग दिखें तो?</span><span class="en">What if some words look different?</span></b><br>
+    <span class="hi">पुराने फ़ॉन्ट में एक ही अक्षर को कई तरह से टाइप किया जाता है। हमने आम तरीक़ों की 143 जाँचें की हैं, फिर भी बदला हुआ टेक्स्ट एक बार पढ़ लें।</span><span class="en">In the old font the same letter can be typed several ways. We test the common ones with 143 checks, but read the converted text once anyway.</span></p>
+  </div>
+</main>
+<footer class="wrap">
+  <p><b>यह सरकारी वेबसाइट नहीं है / This is not a government website.</b> <span class="hi">Kruti Dev एक फ़ॉन्ट का नाम है; हमारा उससे कोई संबंध नहीं।</span><span class="en">Kruti Dev is the name of a font; we have no connection with it.</span></p>
+  <p><a href="../"><span class="hi">सभी टूल</span><span class="en">All tools</span></a> · <a href="../typing-test/"><span class="hi">टाइपिंग टेस्ट</span><span class="en">Typing test</span></a> · <a href="../photo-signature-resize/"><span class="hi">फोटो/सिग्नेचर साइज़</span><span class="en">Photo/signature size</span></a></p>
+</footer>
+<script src="../assets/krutidev.js"></script>
+<script src="../assets/convert.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सिग्नेचर 10-20 KB, फोटो 20-50 KB कैसे करें: IBPS, SBI, SSC, UPSC साइज़ | Aavedan Saathi</title>
+<meta name="description" content="फोटो, सिग्नेचर (140×60 px, 10-20 KB), बाएँ अंगूठे का निशान (240×240) और हस्तलिखित घोषणा (800×400, 50-100 KB) को फ़ोन पर ही सही साइज़ में बनाएँ। साइज़ IBPS, SBI, SSC, UPSC की आधिकारिक अधिसूचना से। मुफ़्त, कोई अपलोड नहीं।">
+<link rel="canonical" href="https://shivamkole1969.github.io/aavedan-saathi/photo-signature-resize/">
+<meta name="theme-color" content="#0f766e">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">आवेदन साथी<small>Aavedan Saathi</small></a>
+  <button class="langbtn" id="langbtn" type="button">English</button>
+</div></header>
+<main class="wrap">
+  <h1><span class="hi">फोटो और सिग्नेचर को सही साइज़ (KB) में बनाएँ</span><span class="en">Make your photo and signature the right size (KB)</span></h1>
+  <p class="lead"><span class="hi">फोटो आपके फ़ोन में ही बदलती है, कहीं अपलोड नहीं होती। मुफ़्त, कोई लॉगिन नहीं।</span><span class="en">The photo is changed on your own phone and never uploaded. Free, no login.</span></p>
+
+  <div class="card">
+    <label for="preset"><span class="hi">1. परीक्षा और फ़ाइल चुनें</span><span class="en">1. Choose the exam and the file type</span></label>
+    <select id="preset"></select>
+    <div id="customBox" class="hidden">
+      <div class="row">
+        <div><label for="cw"><span class="hi">चौड़ाई (px)</span><span class="en">Width (px)</span></label><input id="cw" type="number" min="0" placeholder="140"></div>
+        <div><label for="ch"><span class="hi">ऊँचाई (px)</span><span class="en">Height (px)</span></label><input id="ch" type="number" min="0" placeholder="60"></div>
+      </div>
+      <div class="row">
+        <div><label for="cmin"><span class="hi">न्यूनतम KB</span><span class="en">Min KB</span></label><input id="cmin" type="number" min="0" value="10"></div>
+        <div><label for="cmax"><span class="hi">अधिकतम KB</span><span class="en">Max KB</span></label><input id="cmax" type="number" min="1" value="20"></div>
+        <div><label for="cdpi">DPI</label><input id="cdpi" type="number" min="0" placeholder="200"></div>
+      </div>
+      <p class="small muted"><span class="hi">पिक्सेल खाली छोड़ें तो सिर्फ़ KB बदला जाएगा।</span><span class="en">Leave pixels empty to change only the KB.</span></p>
+    </div>
+    <div id="info" class="small"></div>
+  </div>
+
+  <div class="card">
+    <label><span class="hi">2. फोटो चुनें या कैमरे से लें</span><span class="en">2. Choose a photo or take one</span></label>
+    <label class="filebox"><input id="file" type="file" accept="image/*"><span class="hi">📷 यहाँ टैप करके फोटो चुनें</span><span class="en">📷 Tap here to choose a photo</span></label>
+    <div id="editor" class="hidden">
+      <p class="small muted"><span class="hi">पीले फ्रेम को उँगली से खिसकाएँ। ज़ूम से फ्रेम छोटा-बड़ा करें।</span><span class="en">Drag the yellow frame with your finger. Use zoom to make it smaller or larger.</span></p>
+      <div class="stage"><canvas id="stage"></canvas></div>
+      <div class="row" id="zoomRow">
+        <div><label for="zoom"><span class="hi">ज़ूम</span><span class="en">Zoom</span></label><input id="zoom" type="range" min="20" max="100" value="100"></div>
+      </div>
+      <label class="small" style="font-weight:400"><input id="clean" type="checkbox"> <span class="hi">कागज़ को सफ़ेद और स्याही को गहरा करें (सिग्नेचर, अंगूठा, घोषणा के लिए)</span><span class="en">Make the paper white and the ink darker (for signature, thumb, declaration)</span></label>
+      <div class="btns">
+        <button class="btn secondary" id="rotate" type="button"><span class="hi">↻ घुमाएँ</span><span class="en">↻ Rotate</span></button>
+        <button class="btn" id="makeBtn" type="button" data-hi="फ़ाइल बनाएँ" data-en="Make the file">फ़ाइल बनाएँ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="result" class="card result hidden"></div>
+
+  <div class="card">
+    <h2><span class="hi">सिग्नेचर की फोटो कैसे लें</span><span class="en">How to photograph your signature</span></h2>
+    <ol class="steps">
+      <li><span class="hi">सफ़ेद कागज़ पर काले पेन से हस्ताक्षर करें (IBPS/SBI: कैपिटल अक्षरों में नहीं)।</span><span class="en">Sign on white paper with a black pen (IBPS/SBI: not in capital letters).</span></li>
+      <li><span class="hi">दिन की रोशनी में, ऊपर से सीधे फोटो लें ताकि छाया न पड़े।</span><span class="en">Take the photo from straight above in daylight so there is no shadow.</span></li>
+      <li><span class="hi">ऊपर अपनी परीक्षा का "हस्ताक्षर" विकल्प चुनें, फ्रेम को हस्ताक्षर पर रखें और "फ़ाइल बनाएँ" दबाएँ।</span><span class="en">Pick your exam's "Signature" option above, place the frame on the signature and press "Make the file".</span></li>
+      <li><span class="hi">डाउनलोड हुई फ़ाइल का KB देखें और फॉर्म में अपलोड करें।</span><span class="en">Check the KB of the downloaded file and upload it to the form.</span></li>
+    </ol>
+  </div>
+</main>
+<footer class="wrap">
+  <p><b>यह सरकारी वेबसाइट नहीं है / This is not a government website.</b> <span class="hi">अपनी आधिकारिक अधिसूचना ज़रूर देखें। नियम हर भर्ती में बदल सकते हैं।</span><span class="en">Always check your official notification. Rules can change with each recruitment.</span></p>
+  <p><a href="../"><span class="hi">सभी टूल</span><span class="en">All tools</span></a> · <a href="../typing-test/"><span class="hi">टाइपिंग टेस्ट</span><span class="en">Typing test</span></a> · <a href="../krutidev-unicode-converter/"><span class="hi">कृतिदेव ↔ यूनिकोड</span><span class="en">Krutidev ↔ Unicode</span></a></p>
+</footer>
+<script src="../assets/presets.js"></script>
+<script src="../assets/resize.js"></script>
+</body>
+</html>

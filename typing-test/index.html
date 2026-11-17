@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>हिंदी टाइपिंग टेस्ट (कृतिदेव और यूनिकोड) और इंग्लिश टाइपिंग टेस्ट: SSC नियमों से गलतियाँ | Aavedan Saathi</title>
+<meta name="description" content="मुफ़्त हिंदी (कृतिदेव कीबोर्ड और यूनिकोड) और अंग्रेज़ी टाइपिंग टेस्ट: 1, 2, 5, 10, 15 मिनट, फ़ोन पर भी। SSC के 2022 नियमों के अनुसार पूरी और आधी गलतियाँ, ग्रॉस/नेट स्पीड और की-डिप्रेशन प्रति घंटा। कोई लॉगिन नहीं, कोई विज्ञापन नहीं।">
+<link rel="canonical" href="https://shivamkole1969.github.io/aavedan-saathi/typing-test/">
+<meta name="theme-color" content="#0f766e">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">आवेदन साथी<small>Aavedan Saathi</small></a>
+  <button class="langbtn" id="langbtn" type="button">English</button>
+</div></header>
+<main class="wrap">
+  <h1><span class="hi">टाइपिंग टेस्ट: हिंदी और अंग्रेज़ी</span><span class="en">Typing test: Hindi and English</span></h1>
+  <p class="lead"><span class="hi">SSC के 2022 नियमों से पूरी और आधी गलतियाँ गिनता है। जैसे ही आप टाइप शुरू करेंगे, टाइमर चल पड़ेगा।</span><span class="en">Counts full and half mistakes by SSC's 2022 rules. The timer starts as soon as you begin typing.</span></p>
+
+  <div class="card">
+    <div class="row">
+      <div><label for="lang"><span class="hi">भाषा</span><span class="en">Language</span></label>
+        <select id="lang"><option value="hi">हिंदी</option><option value="en">English</option></select></div>
+      <div><label for="mins"><span class="hi">समय</span><span class="en">Time</span></label>
+        <select id="mins">
+          <option value="1" data-hi="1 मिनट" data-en="1 minute">1 मिनट</option>
+          <option value="2" data-hi="2 मिनट" data-en="2 minutes">2 मिनट</option>
+          <option value="5" data-hi="5 मिनट" data-en="5 minutes">5 मिनट</option>
+          <option value="10" selected data-hi="10 मिनट (CHSL LDC/JSA)" data-en="10 minutes (CHSL LDC/JSA)">10 मिनट (CHSL LDC/JSA)</option>
+          <option value="15" data-hi="15 मिनट (DEST)" data-en="15 minutes (DEST)">15 मिनट (DEST)</option>
+        </select></div>
+      <div><label for="passage"><span class="hi">पाठ</span><span class="en">Passage</span></label><select id="passage"></select></div>
+      <div id="kbdBox"><label for="kbd"><span class="hi">हिंदी कीबोर्ड</span><span class="en">Hindi keyboard</span></label>
+        <select id="kbd">
+          <option value="uni" data-hi="यूनिकोड (इनस्क्रिप्ट / फ़ोन)" data-en="Unicode (Inscript / phone)">यूनिकोड (इनस्क्रिप्ट / फ़ोन)</option>
+          <option value="kd" data-hi="कृतिदेव (अंग्रेज़ी कीबोर्ड से)" data-en="Krutidev (on an English keyboard)">कृतिदेव (अंग्रेज़ी कीबोर्ड से)</option>
+        </select></div>
+    </div>
+    <div id="customBox" class="hidden">
+      <label for="customText"><span class="hi">अपना पाठ पेस्ट करें (हिंदी यूनिकोड, कृतिदेव या अंग्रेज़ी)</span><span class="en">Paste your own passage (Unicode Hindi, Krutidev or English)</span></label>
+      <textarea id="customText" rows="4" spellcheck="false"></textarea>
+      <p id="customHint" class="small muted"></p>
+      <div class="btns"><button class="btn secondary" id="useCustom" type="button"><span class="hi">इस पाठ से टेस्ट तैयार करें</span><span class="en">Use this passage</span></button></div>
+    </div>
+    <label class="small" style="font-weight:400"><input id="strict" type="checkbox"> <span class="hi">कड़ा मोड: बैकस्पेस बंद</span><span class="en">Strict mode: Backspace off</span></label>
+    <p id="hiHelp" class="note small"><span class="hi">यूनिकोड मोड: अपने कीबोर्ड में हिंदी चालू करें। फ़ोन पर Gboard में हिंदी जोड़ें; कंप्यूटर (Windows) पर Settings → Time &amp; Language → Language में "Hindi" जोड़कर "Hindi Traditional (Inscript)" कीबोर्ड चुनें।</span><span class="en">Unicode mode: switch your keyboard to Hindi. On a phone, add Hindi in Gboard; on a Windows computer, add "Hindi" under Settings → Time &amp; Language → Language and pick the "Hindi Traditional (Inscript)" keyboard.</span></p>
+    <p id="kdHelp" class="note small hidden"><span class="hi">कृतिदेव मोड: कंप्यूटर का कीबोर्ड अंग्रेज़ी पर ही रहने दें और कृतिदेव की तरह टाइप करें (जैसे <code>Hkkjr</code> = भारत; छोटी इ की मात्रा <code>f</code> पहले, रेफ <code>Z</code> बाद में)। स्क्रीन पर हिंदी दिखेगी। फ़ोन पर नीचे दिया कीबोर्ड दबाएँ। इस मोड में सिर्फ़ आख़िर से मिटा सकते हैं (बैकस्पेस); तीर वाली कुंजियाँ बंद हैं।</span><span class="en">Krutidev mode: keep the computer keyboard on English and type the Krutidev way (for example <code>Hkkjr</code> = भारत; the short-i <code>f</code> first, the reph <code>Z</code> after). Hindi shows on screen. On a phone, tap the keyboard below. In this mode you can only delete from the end (Backspace); arrow keys are off.</span></p>
+    <p id="layoutSrc" class="src"><span class="hi">SSC के टाइपिंग टेस्ट में हिंदी के चार लेआउट चुने जा सकते हैं: इनस्क्रिप्ट, कृतिदेव, रेमिंगटन गेल और रेमिंगटन CBI; टेस्ट के बीच भी लेआउट बदल सकते हैं (CHSL 2023 टियर-II निर्देश, बिंदु 6 और 8: <a href="https://www.ssckkr.kar.nic.in/CHSLE-23(T-2)_TT%20Instructions.pdf" target="_blank" rel="noopener">ssckkr.kar.nic.in</a>)। यहाँ अभी यूनिकोड (आपके अपने हिंदी कीबोर्ड से) और कृतिदेव हैं।</span><span class="en">SSC's typing test lets you choose one of four Hindi layouts: Inscript, Krutidev, Remington GAIL and Remington CBI, and you may switch during the test (CHSL 2023 Tier-II instructions, points 6 and 8: <a href="https://www.ssckkr.kar.nic.in/CHSLE-23(T-2)_TT%20Instructions.pdf" target="_blank" rel="noopener">ssckkr.kar.nic.in</a>). This page has Unicode (your own Hindi keyboard) and Krutidev for now.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="row" style="align-items:center">
+      <div class="timer" id="timer">10:00</div>
+      <div class="btns" style="justify-content:flex-end">
+        <button class="btn secondary" id="restart" type="button"><span class="hi">दोबारा शुरू</span><span class="en">Restart</span></button>
+        <button class="btn" id="submit" type="button"><span class="hi">जमा करें</span><span class="en">Submit</span></button>
+      </div>
+    </div>
+    <div class="passage" id="passageBox"></div>
+    <label for="typebox"><span class="hi">यहाँ टाइप करें</span><span class="en">Type here</span></label>
+    <textarea id="typebox" class="typebox" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+    <div id="oskWrap" class="hidden">
+      <div class="btns"><button class="btn secondary" id="oskToggle" type="button" data-hi="कृतिदेव कीबोर्ड छिपाएँ" data-en="Hide the Krutidev keyboard">कृतिदेव कीबोर्ड छिपाएँ</button></div>
+      <div id="osk" class="osk" role="group" aria-label="Krutidev keyboard"></div>
+    </div>
+  </div>
+
+  <div id="report" class="card hidden"></div>
+
+  <div class="card">
+    <h2><span class="hi">SSC टाइपिंग टेस्ट के नियम (संक्षेप में)</span><span class="en">SSC typing test rules in short</span></h2>
+    <ul>
+      <li><span class="hi">CHSL (LDC/JSA): अंग्रेज़ी 35 wpm (लगभग 10,500 की-डिप्रेशन/घंटा), हिंदी 30 wpm (लगभग 9,000/घंटा); समय 10 मिनट।</span><span class="en">CHSL (LDC/JSA): English 35 wpm (about 10,500 key depressions/hour), Hindi 30 wpm (about 9,000/hour); 10 minutes.</span></li>
+      <li><span class="hi">DEST (DEO): 15 मिनट; भाग A 15,000 और भाग B 8,000 की-डिप्रेशन/घंटा।</span><span class="en">DEST (DEO): 15 minutes; Part A 15,000 and Part B 8,000 key depressions/hour.</span></li>
+      <li><span class="hi">पूरी गलती: शब्द छूटना, गलत शब्द, अतिरिक्त शब्द, वर्तनी की गलती, शब्द दोहराना, अधूरा शब्द।</span><span class="en">Full mistake: a word left out, a wrong word, an extra word, a spelling error, a repeated word, an incomplete word.</span></li>
+      <li><span class="hi">आधी गलती: स्पेस की गलती, कैपिटल की गलती (हिंदी में लागू नहीं), विराम चिह्न, शब्दों का क्रम उलटना, पैराग्राफ़ Tab से शुरू न करना।</span><span class="en">Half mistake: spacing, capitalisation (not for Hindi), punctuation, swapped words, a paragraph not started with Tab.</span></li>
+      <li><span class="hi">विराम चिह्न के बाद केवल एक स्पेस। समय के भीतर गलती सुधार सकते हैं।</span><span class="en">Only one space after punctuation. You may correct mistakes within the time.</span></li>
+    </ul>
+    <p class="src"><span class="hi">स्रोत:</span><span class="en">Sources:</span> SSC, "Revised guidelines for evaluation of typing test/DEST scripts (English/Hindi)", 20.06.2022: <a href="https://sscer.org/matter/TypeDEST_Guidelines_20062022" target="_blank" rel="noopener">sscer.org/matter/TypeDEST_Guidelines_20062022</a>; <a href="https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsl_2025.pdf" target="_blank" rel="noopener">SSC CHSL 2025</a> <span class="hi">नोटिस (23.06.2025), पैरा</span><span class="en">notice (23.06.2025), paras</span> 13.8.13.6-7. <span class="hi">पैराग्राफ़/Tab नियम इस टेस्ट में नहीं जाँचा जाता (हर पाठ एक पैराग्राफ़ है)।</span><span class="en">The paragraph/Tab rule is not checked here (each passage is one paragraph).</span></p>
+  </div>
+</main>
+<footer class="wrap">
+  <p><b>यह सरकारी वेबसाइट नहीं है / This is not a government website.</b> <span class="hi">अपनी आधिकारिक अधिसूचना ज़रूर देखें। नियम हर भर्ती में बदल सकते हैं।</span><span class="en">Always check your official notification. Rules can change with each recruitment.</span></p>
+  <p><a href="../"><span class="hi">सभी टूल</span><span class="en">All tools</span></a> · <a href="../photo-signature-resize/"><span class="hi">फोटो/सिग्नेचर साइज़</span><span class="en">Photo/signature size</span></a> · <a href="../krutidev-unicode-converter/"><span class="hi">कृतिदेव ↔ यूनिकोड</span><span class="en">Krutidev ↔ Unicode</span></a></p>
+</footer>
+<script src="../assets/passages.js"></script>
+<script src="../assets/score.js"></script>
+<script src="../assets/krutidev.js"></script>
+<script src="../assets/typing.js"></script>
+</body>
+</html>
