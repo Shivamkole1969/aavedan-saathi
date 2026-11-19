@@ -51,7 +51,7 @@
       if (p.decl) html += '<p class="small"><b>' + esc(T('घोषणा का पाठ (अपने हाथ से अंग्रेज़ी में लिखें):', 'Declaration text (write it by hand in English):')) + '</b><br>' + esc(window.AS_DECL) + '</p>' +
         '<p class="small muted">' + esc(T('SBI PO 2026-27 में नाम के बाद जन्मतिथि और अंत में यह वाक्य भी है: "The signature, photograph and left-hand thumb impression is of mine."', 'SBI PO 2026-27 adds your date of birth after the name and ends with: "The signature, photograph and left-hand thumb impression is of mine."')) + '</p>';
       html += '<p class="small muted">' + esc(T('अगर सबसे अच्छी क्वालिटी पर भी फ़ाइल न्यूनतम KB से छोटी रहे, तो हम फ़ाइल में एक खाली टिप्पणी-भाग जोड़ते हैं; पिक्सेल और तस्वीर नहीं बदलते।', 'If the file is still under the minimum KB at top quality, we add a blank comment block inside the file; the pixels and the picture do not change.')) + '</p>';
-      html += '<div class="src">' + esc(T('स्रोत (आधिकारिक अधिसूचना, 12 नवंबर 2026 को जाँची):', 'Source (official notice, checked 12 Nov 2026):')) + '<ul>';
+      html += '<div class="src">' + esc(T('स्रोत (आधिकारिक अधिसूचना, 19 नवंबर 2026 को जाँची):', 'Source (official notice, checked 19 Nov 2026):')) + '<ul>';
       p.sources.forEach(function (s) { html += '<li><a href="' + s.url + '" rel="noopener" target="_blank">' + esc(s.t) + '</a></li>'; });
       html += '</ul>' + esc(T('नई भर्ती में नियम बदल सकते हैं। अपलोड से पहले अपनी अधिसूचना से मिलान करें।', 'Rules can change with each new recruitment. Match against your own notice before uploading.')) + '</div>';
       $('clean').checked = !!p.clean;

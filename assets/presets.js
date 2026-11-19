@@ -1,4 +1,4 @@
-// Upload presets. Every number comes from the official notice named in `sources` (checked 12 Nov 2026).
+// Upload presets. Every number comes from the official notice named in `sources` (re-checked 19 Nov 2026; first checked 12 Nov 2026).
 // Add a preset only after reading its official PDF; never from a blog.
 (function () {
   var IBPS_SBI = [
