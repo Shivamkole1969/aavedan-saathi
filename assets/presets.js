@@ -5,7 +5,7 @@
     { t: 'IBPS CRP PO/MT-XVI, Detailed Notification (2026), printed pp. 36-38', url: 'https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf' },
     { t: 'IBPS CRP CSA-XVI (Clerk), Notification (2026), printed pp. 52-54', url: 'https://www.ibps.in/wp-content/uploads/Notification_CRP_CSA_XVI-Final.pdf' },
     { t: 'SBI PO, Advt. CRPD/PO/2026-27/09, Annexure II', url: 'https://sbi.co.in/documents/77530/57941334/18062026_1_Detailed_Adv.2026.pdf' },
-    { t: 'SBI Junior Associate (Clerk), Advt. CRPD/CR/2025-26/06, Annexure-II', url: 'https://sbi.co.in/documents/77530/52947104/JA+2025+-Detailed+Advt.pdf/8f7ff18f-1972-21c8-9212-5a8cf85a7099?t=1754398573326' }
+    { t: 'SBI Junior Associate (Clerk) 2026, Advt. CRPD/CR/2026-27/17, upload instructions', url: 'https://sbi.bank.in/webfiles/uploads/files_2627/08/JA_2026_Detailed_Advt_Eng.pdf' }
   ];
   var SSC_BASE = 'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/';
   var SSC = [
@@ -16,12 +16,13 @@
   ];
   var UPSC = [
     { t: 'UPSC IES/ISS 2026, Notice No. 07/2026 (11.02.2026), p. 26', url: 'https://www.upsc.gov.in/sites/default/files/Exam_Notification_IES_ISS_Eng_11022026.pdf' },
-    { t: 'UPSC CAPF (AC) 2026, Notice No. 08/2026 (20.02.2026), p. 15', url: 'https://www.upsc.gov.in/sites/default/files/ExamNotifi_CAPF_AC_Exam_2026_Eng_20022026.pdf' }
+    { t: 'UPSC CAPF (AC) 2026, Notice No. 08/2026 (20.02.2026), p. 15', url: 'https://www.upsc.gov.in/sites/default/files/ExamNotifi_CAPF_AC_Exam_2026_Eng_20022026.pdf' },
+    { t: 'UPSC ESE 2027, Notice No. 02/2027-ENGG (16.09.2026), instruction 4: photo and signature 20-300 KB each', url: 'https://www.upsc.gov.in/sites/default/files/Notif-ESEP-2027-Engl-160926.pdf' }
   ];
   var UPSC_SIGN = UPSC.concat([{ t: 'UPSC CSE 2026, Notice No. 05/2026-CSE (04.02.2026), p. 2', url: 'https://www.upsc.gov.in/sites/default/files/Notif-CSP-2026-Engl-060226Rev.pdf' }]);
-  var G_IBPS = { hi: 'IBPS PO/क्लर्क 2026 · SBI PO 2026-27 · SBI क्लर्क 2025', en: 'IBPS PO/Clerk 2026 · SBI PO 2026-27 · SBI Clerk 2025' };
+  var G_IBPS = { hi: 'IBPS PO/क्लर्क 2026 · SBI PO 2026-27 · SBI क्लर्क 2026', en: 'IBPS PO/Clerk 2026 · SBI PO 2026-27 · SBI Clerk 2026' };
   var G_SSC = { hi: 'SSC CGL/CHSL 2026 · GD 2026 · MTS 2025', en: 'SSC CGL/CHSL 2026 · GD 2026 · MTS 2025' };
-  var G_UPSC = { hi: 'UPSC (2026 की अधिसूचनाएँ)', en: 'UPSC (2026 notices)' };
+  var G_UPSC = { hi: 'UPSC (2026 और ESE 2027 की अधिसूचनाएँ)', en: 'UPSC (2026 and ESE 2027 notices)' };
   var G_OWN = { hi: 'अपना साइज़', en: 'Your own size' };
   var SSC_PHOTO = {
     hi: 'SSC में फोटो अपलोड नहीं होती: फॉर्म भरते समय वेबकैम या mySSC ऐप से लाइव फोटो ली जाती है (CGL 2026, पैरा 9.4-9.5)। अच्छी रोशनी, सादा बैकग्राउंड; पैरा 9.5(v): टोपी, मास्क या चश्मा नहीं।',
@@ -50,10 +51,10 @@
       extra: SSC_PHOTO },
     { id: 'upsc-photo', group: G_UPSC, label: { hi: 'फोटो: .jpg, 20-200 KB', en: 'Photo: .jpg, 20-200 KB' },
       minKB: 20, maxKB: 200, clean: false, sources: UPSC,
-      notes: { hi: 'इन दो 2026 नोटिस से केवल KB सीमा ली गई है; पिक्सेल साइज़ हमने यहाँ नहीं जाँचा। CSE, NDA, CDS के लिए अपनी अधिसूचना ज़रूर देखें।', en: 'Only the KB range is taken from these two 2026 notices; the pixel size was not checked here. For CSE, NDA or CDS, check your own notice.' } },
+      notes: { hi: 'इन दो 2026 नोटिस से केवल KB सीमा ली गई है; पिक्सेल साइज़ हमने यहाँ नहीं जाँचा। CSE, NDA, CDS के लिए अपनी अधिसूचना ज़रूर देखें। UPSC ESE 2027 नोटिस (16.09.2026) में फोटो और हस्ताक्षर दोनों 20-300 KB हैं; यहाँ बनी 20-200 KB फ़ाइल उस सीमा में भी आती है।', en: 'Only the KB range is taken from these two 2026 notices; the pixel size was not checked here. For CSE, NDA or CDS, check your own notice. The UPSC ESE 2027 notice (16.09.2026) allows 20-300 KB for both photo and signature; a file made here at 20-200 KB also fits that range.' } },
     { id: 'upsc-sign', group: G_UPSC, label: { hi: 'हस्ताक्षर: .jpg, 20-100 KB', en: 'Signature: .jpg, 20-100 KB' },
       minKB: 20, maxKB: 100, clean: true, sources: UPSC_SIGN,
-      notes: { hi: 'CSE 2026 नोटिस: सफ़ेद कागज़ पर काली स्याही से तीन बार, एक के नीचे एक हस्ताक्षर।', en: 'CSE 2026 notice: sign three times, one below the other, in black ink on white paper.' } },
+      notes: { hi: 'CSE 2026 नोटिस: सफ़ेद कागज़ पर काली स्याही से तीन बार, एक के नीचे एक हस्ताक्षर। ESE 2027 नोटिस में 20-300 KB है; यहाँ बनी 20-100 KB फ़ाइल उसमें भी आती है।', en: 'CSE 2026 notice: sign three times, one below the other, in black ink on white paper. The ESE 2027 notice allows 20-300 KB; a file made here at 20-100 KB also fits.' } },
     { id: 'custom', group: G_OWN, label: { hi: 'अपना साइज़ और KB डालें', en: 'Enter your own size and KB' }, custom: true, clean: false, sources: [] }
   ];
   window.AS_DECL = 'I, ________ (Name of the candidate), hereby declare that all the information submitted by me in the application form is correct, true and valid. I will present the supporting documents as and when required.';
