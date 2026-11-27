@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hi" data-lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compress PDF to 100 KB, 200 KB, 500 KB (photos to A4 PDF) | पीडीएफ साइज़ कम करें | Aavedan Saathi</title>
+<meta name="description" content="Compress PDF to 100 KB, 200 KB or 500 KB on your phone, or turn phone photos of a certificate into one A4 PDF under the limit. पीडीएफ का साइज़ KB में कम करें, फ़ोटो से A4 PDF बनाएँ। पहले जाँच: सीमा के अंदर है या नहीं? मुफ़्त, कोई अपलोड नहीं।">
+<meta property="og:image" content="https://shivamkole1969.github.io/aavedan-saathi/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://shivamkole1969.github.io/aavedan-saathi/pdf-compressor/">
+<meta name="theme-color" content="#0f766e">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/common.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">आवेदन साथी<small>Aavedan Saathi</small></a>
+  <button class="langbtn" id="langbtn" type="button">English</button>
+</div></header>
+<main class="wrap">
+  <h1><span class="hi">PDF का साइज़ (KB) कम करें, फ़ोटो से A4 PDF बनाएँ</span><span class="en">Make a PDF smaller (KB), or turn photos into an A4 PDF</span><span class="kw">Compress PDF to 100 KB, 200 KB, 500 KB</span></h1>
+  <p class="lead"><span class="hi">फ़ाइल आपके फ़ोन में ही बदलती है, कहीं अपलोड नहीं होती। पहले जाँच होती है कि फ़ाइल आपकी चुनी सीमा के अंदर है या नहीं। मुफ़्त, कोई लॉगिन नहीं।</span><span class="en">The file is changed on your own phone and never uploaded. It is checked first against the limit you choose. Free, no login.</span></p>
+
+  <div class="card">
+    <label for="target"><span class="hi">1. फॉर्म की सीमा चुनें</span><span class="en">1. Choose the form's limit</span></label>
+    <select id="target"></select>
+    <div id="customBox" class="hidden">
+      <div class="row">
+        <div><label for="ckb"><span class="hi">अधिकतम KB</span><span class="en">Max KB</span></label><input id="ckb" type="number" min="5" value="200"></div>
+      </div>
+    </div>
+    <div id="info" class="small"></div>
+  </div>
+
+  <div class="card">
+    <label><span class="hi">2. एक PDF चुनें, या 1-10 फ़ोटो (हर फ़ोटो एक पेज)</span><span class="en">2. Choose one PDF, or 1-10 photos (one page per photo)</span></label>
+    <label class="filebox"><input id="file" type="file" accept="application/pdf,.pdf,image/*" multiple><span class="hi">📄 यहाँ टैप करके PDF या फ़ोटो चुनें</span><span class="en">📄 Tap here to choose a PDF or photos</span></label>
+  </div>
+
+  <div id="check" class="card hidden"></div>
+
+  <div class="card">
+    <label class="small" id="fitRow" style="font-weight:400"><input id="fitA4" type="checkbox"> <span class="hi">हर पेज को A4 पर रखें</span><span class="en">Put every page on A4</span></label>
+    <label class="small" style="font-weight:400"><input id="gray" type="checkbox"> <span class="hi">ग्रे + सफ़ेद कागज़ (स्कैन और फ़ोटो के लिए: उसी KB में अक्सर ज़्यादा साफ़। रंग हट जाता है; बहुत हल्की मुहर या पेंसिल गायब हो सकती है)</span><span class="en">Grey + white paper (for scans and photos: often clearer at the same KB. Colour is removed; very faint stamps or pencil can vanish)</span></label>
+    <div class="btns">
+      <button class="btn" id="go" type="button" disabled data-hi="छोटा करें" data-en="Make it smaller">छोटा करें</button>
+    </div>
+  </div>
+
+  <div id="result" class="card result hidden"></div>
+
+  <div class="card">
+    <h2><span class="hi">प्रमाणपत्र की अच्छी PDF कैसे बनाएँ</span><span class="en">How to make a good PDF of a certificate</span></h2>
+    <ol class="steps">
+      <li><span class="hi">प्रमाणपत्र को समतल जगह पर रखें और दिन की रोशनी में ऊपर से सीधे फोटो लें। कागज़ पूरी फोटो में भर जाए।</span><span class="en">Lay the certificate flat and photograph it from straight above in daylight, so the paper fills the photo.</span></li>
+      <li><span class="hi">ऊपर अपनी सीमा चुनें (जैसे IBPS: A4, 500 KB) और फ़ोटो या PDF डालें।</span><span class="en">Choose your limit above (for example IBPS: A4, 500 KB) and add the photos or the PDF.</span></li>
+      <li><span class="hi">"छोटा करें" दबाएँ। सीमा से बड़ी फ़ाइल बने तो कम पेज रखें या "ग्रे + सफ़ेद कागज़" आज़माएँ।</span><span class="en">Press "Make it smaller". If it is still over the limit, keep fewer pages or try "Grey + white paper".</span></li>
+      <li><span class="hi">डाउनलोड हुई PDF खोलकर देखें कि नाम, अंक और मुहर साफ़ पढ़ी जा रही हैं, फिर फॉर्म में अपलोड करें।</span><span class="en">Open the downloaded PDF, check that names, marks and stamps are readable, then upload it to the form.</span></li>
+    </ol>
+  </div>
+</main>
+<footer class="wrap">
+  <p><b>यह सरकारी वेबसाइट नहीं है / This is not a government website.</b> <span class="hi">अपनी आधिकारिक अधिसूचना ज़रूर देखें। नियम हर भर्ती में बदल सकते हैं।</span><span class="en">Always check your official notification. Rules can change with each recruitment.</span></p>
+  <p><a href="../"><span class="hi">सभी टूल</span><span class="en">All tools</span></a> · <a href="../photo-signature-resize/"><span class="hi">फोटो/सिग्नेचर साइज़</span><span class="en">Photo/signature size</span></a> · <a href="../typing-test/"><span class="hi">टाइपिंग टेस्ट</span><span class="en">Typing test</span></a> · <a href="../krutidev-unicode-converter/"><span class="hi">कृतिदेव ↔ यूनिकोड</span><span class="en">Krutidev ↔ Unicode</span></a></p>
+  <p class="small muted">PDF pages are read with pdf.js (Mozilla, <a href="../assets/vendor/pdfjs-6.5.438/LICENSE">Apache-2.0</a>), served from this site.</p>
+</footer>
+<script src="../assets/pdfwrite.js"></script>
+<script src="../assets/compress.js"></script>
+</body>
+</html>
